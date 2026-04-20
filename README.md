@@ -1,16 +1,49 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I am Andrej Marovšek.
 
-Currently, two official plugins are available:
+Currently (April 2026), I work as a mechatronics engineer, but I am transitioning into software development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About Me
 
-## React Compiler
+My journey started with a 3-year electrical program. After that, I discovered mechatronics and decided to continue with an additional 2-year program. Later, I enrolled in a mechatronics engineering school and graduated in 2021.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+During my education, programming was only a small part of the curriculum (Arduino, PLCs, basic controllers), but I quickly found it very interesting.
 
-## Expanding the ESLint configuration
+## Work Experience
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+After finishing school, I started working in a grinding workshop as a constructor and CNC programmer.
+
+In this role, I:
+
+- Design cutting tools for wood and metal industry
+- Program CNC machines (i like to optimise g-code programs to max!)
+- Solve technical and system-related problems
+
+This experience helped me develop strong logical thinking and practical problem-solving skills.
+
+## Programming Journey
+
+In my free time, I started learning programming more seriously.
+
+I began with The Odin Project, where I gained a broad understanding of web development, including:
+
+- HTML, CSS, JavaScript
+- React
+- General web development concepts
+
+After finishing the course, I built several small projects and simple websites.
+
+## Current Goal
+
+I am currently building my portfolio and looking for a job as a:
+
+- Frontend Developer
+- Junior Software Developer
+
+I would like to work in a field that combines software and hardware, where I can use both my programming skills and my engineering background.
+
+## Contact
+
+GitHub: [(https://github.com/Mararovsek99)]
+Email: [(andrej.marovsek99@gmail.com)]
