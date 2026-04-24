@@ -1,6 +1,11 @@
 import Magnetic from "./magnetic";
 
 const navbar = () => {
+  const buttons = [
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
   return (
     <div className="flex justify-between">
       <Magnetic>
@@ -23,32 +28,16 @@ const navbar = () => {
 
       {/* // navigation buttons with hover effected dots under them*/}
       <div className="flex items-center gap-4">
-        <Magnetic>
-          <div className="group flex flex-col justify-center items-center">
-            <button className=" text-white text-xl p-2 rounded-lg ">
-              About
-            </button>
-            <span className="group-hover:opacity-100 opacity-0 transition inline-block h-1.5 w-1.5 rounded-full bg-white"></span>
-          </div>
-        </Magnetic>
-
-        <Magnetic>
-          <div className="group flex flex-col justify-center items-center">
-            <button className=" text-white text-xl p-2 rounded-lg ">
-              Projects
-            </button>
-            <span className="group-hover:opacity-100 opacity-0 transition inline-block h-1.5 w-1.5 rounded-full bg-white"></span>
-          </div>
-        </Magnetic>
-
-        <Magnetic>
-          <div className="group flex flex-col justify-center items-center">
-            <button className=" text-white text-xl p-2 rounded-lg ">
-              Contact
-            </button>
-            <span className="group-hover:opacity-100 opacity-0 transition inline-block h-1.5 w-1.5 rounded-full bg-white"></span>
-          </div>
-        </Magnetic>
+        {buttons.map((button) => (
+          <Magnetic key={button.name}>
+            <div className="group flex flex-col justify-center items-center">
+              <button className=" text-white text-xl p-2 rounded-lg ">
+                {button.name}
+              </button>
+              <span className="group-hover:scale-100 scale-0 transition inline-block h-2 w-2 rounded-full bg-white"></span>
+            </div>
+          </Magnetic>
+        ))}
       </div>
     </div>
   );
