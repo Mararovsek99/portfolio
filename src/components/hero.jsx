@@ -3,7 +3,7 @@ import navbar from "./navbar";
 const hero = () => {
   return (
     <>
-      <section className="bg-[#97999b] h-screen text-white text-md p-8 overflow-hidden relative">
+      <section className="bg-[#999d9e] h-screen text-white text-md p-8 overflow-hidden relative">
         {/* nav bar */}
         {navbar()}
         <img
