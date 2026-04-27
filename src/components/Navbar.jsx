@@ -1,6 +1,6 @@
-import Magnetic from "./magnetic";
+import Magnetic from "./Magnetic";
 
-const navbar = () => {
+const Navbar = () => {
   const buttons = [
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
@@ -43,4 +43,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
