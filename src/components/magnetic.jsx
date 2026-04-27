@@ -1,18 +1,20 @@
 "use client";
-// eslint-disable-next-line no-unused-vars
+
 import { motion, useMotionValue, useSpring } from "motion/react";
 import { useRef } from "react";
 
-export default function Magnetic({ children, strength = 0.2, className = "" }) {
+export default function Magnetic({ children, strength = 0.4, className = "" }) {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const springX = useSpring(x, { stiffness: 500, damping: 50 });
-  const springY = useSpring(y, { stiffness: 500, damping: 50 });
+  const springX = useSpring(x, { stiffness: 500, damping: 40 });
+  const springY = useSpring(y, { stiffness: 500, damping: 40 });
 
   function handleMouseMove(e) {
+    if (!ref.current) return;
+
     const rect = ref.current.getBoundingClientRect();
 
     const centerX = rect.left + rect.width / 2;
