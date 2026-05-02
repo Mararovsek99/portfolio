@@ -7,7 +7,7 @@ const Navbar = () => {
     { name: "Contact", href: "#contact" },
   ];
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between p-8">
       <Magnetic>
         <div className="group text-white text-lg p-2 inline-flex items-center gap-1 cursor-pointer">
           <span className="inline-block transition-transform duration-700 ease-out group-hover:-rotate-[360deg]">

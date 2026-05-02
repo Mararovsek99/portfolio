@@ -5,7 +5,7 @@ import { GoArrowDownRight } from "react-icons/go";
 const Hero = () => {
   return (
     <>
-      <section className="bg-[#999d9e] h-screen text-white text-md p-8 overflow-hidden relative">
+      <section className="bg-[#999d9e] h-screen text-white text-md overflow-hidden relative">
         {/* nav bar */}
         {Navbar()}
         <img
@@ -32,6 +32,14 @@ const Hero = () => {
             <span className="text-4xl">with Engineering Expertise</span>
           </div>
         </div>
+        <section className="absolute top-0 w-screen h-screen overflow-hidden  flex items-end">
+          <div className="marquee">
+            <div className="marquee-track">
+              <h1>Andrej Marovšek -</h1>
+              <h1>Andrej Marovšek -</h1>
+            </div>
+          </div>
+        </section>
       </section>
     </>
   );
