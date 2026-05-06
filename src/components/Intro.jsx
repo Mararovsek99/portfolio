@@ -4,13 +4,13 @@ const Intro = () => {
       <h2 className="text-5xl p-10">
         <p className="font-bold">Hi, I’m Andrej.</p>{" "}
         <p>
-          I design cutting tools, do CNC programming, and work with CAD/CAM,
-          while learning web development.
+          Frontend Developer with real engineering experience in CAD/CAM and 3D
+          modeling of cutting tools.
         </p>
       </h2>
       <h3 className="text-xl p-10 mt-12">
-        I like building things, solving problems, and understanding how systems
-        work — from machines to code.
+        Whether it’s a frontend app, a YT to MP3 tool, or a mechanical project,
+        I enjoy building things that work well, feel fast, and look clean.
       </h3>
     </section>
   );
