@@ -5,7 +5,7 @@ const Intro = () => {
         <p className="font-bold">Hi, I’m Andrej.</p>{" "}
         <p>
           Frontend Developer with real engineering experience in CAD/CAM and 3D
-          modeling of cutting tools.
+          modeling of cutting tools and mechanical parts.
         </p>
       </h2>
       <h3 className="text-xl p-10 mt-12">
