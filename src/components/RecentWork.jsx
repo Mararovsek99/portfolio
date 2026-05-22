@@ -1,34 +1,45 @@
 import React, { useState } from "react";
 import { portfolioImages } from "../assets/portfolioImages";
+import "./RecentWork.css";
 
 const projects = [
   {
     title: "Fizio LuMa",
-    technologies: ["React", "TailwindCSS", "Vite"],
+    technologies: [
+      "Next.js",
+      "React",
+      "TailwindCSS",
+      "Framer Motion",
+      "Vercel",
+    ],
     image: portfolioImages[0],
     url: "https://fizioluma.si",
   },
+
   {
     title: "CV Maker",
-    technologies: ["Next.js", "Stripe", "MongoDB"],
+    technologies: ["React", "JavaScript", "TailwindCSS", "Vite", "Netlify"],
     image: portfolioImages[1],
     url: "https://cvmaker-app.netlify.app/",
   },
+
   {
-    title: "Battleship Game",
-    technologies: ["Gatsby", "GraphQL", "Sass"],
+    title: "Battleship",
+    technologies: ["JavaScript", "HTML", "CSS", "Webpack", "Jest"],
     image: portfolioImages[2],
     url: "https://mararovsek99.github.io/battleship/",
   },
+
   {
     title: "Etch-A-Sketch",
-    technologies: ["Vue", "Firebase", "TailwindCSS"],
+    technologies: ["JavaScript", "HTML", "CSS", "DOM Manipulation"],
     image: portfolioImages[3],
     url: "https://mararovsek99.github.io/etch-a-sketch/",
   },
+
   {
     title: "Tic Tac Toe",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["JavaScript", "HTML", "CSS", "Module Pattern"],
     image: portfolioImages[4],
     url: "https://mararovsek99.github.io/tic-tac-toe/",
   },
@@ -58,14 +69,18 @@ const RecentWork = () => {
             onMouseMove={handleMouseMove}
             onClick={() => window.open(project.url, "_blank")}
           >
-            <div className="text-8xl text-left w-1/2 ml-20 m-8">
+            <div
+              className={`text-8xl text-left w-1/2 ml-20 m-8 project-title${hovered === idx ? " hovered" : ""}`}
+            >
               {project.title}
             </div>
-            <div className="flex gap-2 w-1/2 justify-end flex-wrap">
+            <div
+              className={`flex gap-2 w-1/2 justify-end flex-wrap tech-mr${hovered === idx ? " hovered" : ""}`}
+            >
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium border border-gray-300"
+                  className={`tech-badge bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium border border-gray-300${hovered === idx ? " hovered" : ""}`}
                 >
                   {tech}
                 </span>

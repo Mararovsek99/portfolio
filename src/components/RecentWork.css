@@ -1,0 +1,26 @@
+.project-title {
+  transition:
+    color 0.2s,
+    margin-left 0.2s;
+}
+.project-title.hovered {
+  color: #888888;
+  margin-left: 20px;
+}
+.tech-badge {
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.tech-badge.hovered {
+  background: #e0e7ef;
+  color: #222;
+  border-color: #b0b8c1;
+}
+.tech-mr {
+  margin-right: 50px;
+  transition: margin-right 0.2s;
+}
+.tech-mr.hovered {
+  margin-right: 2px;
+}
