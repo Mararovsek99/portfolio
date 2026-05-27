@@ -21,6 +21,16 @@
   padding-right: 5rem;
   flex-shrink: 0;
 }
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Old Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
 
 @keyframes marquee {
   from {

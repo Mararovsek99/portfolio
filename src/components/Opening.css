@@ -1,0 +1,27 @@
+.opening-section {
+  height: 100vh;
+  background: #000;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 5rem;
+  overflow: hidden;
+
+  transform: translateY(0);
+  transition: height 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.opening-hide {
+  height: 0;
+}
+
+.opening-text {
+  transition: opacity 0.3s ease;
+}
+
+.text-hide {
+  opacity: 0;
+}
