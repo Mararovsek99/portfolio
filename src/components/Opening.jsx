@@ -43,11 +43,16 @@ const Opening = () => {
 
   useEffect(() => {
     if (index < greetings.length - 1) {
-      const timer = setTimeout(() => setIndex(index + 1), 300);
+      const isFirst = index === 0;
+      const isLastBeforeEnd = index === greetings.length - 2;
+
+      const delay = isFirst || isLastBeforeEnd ? 500 : 200;
+
+      const timer = setTimeout(() => setIndex(index + 1), delay);
       return () => clearTimeout(timer);
     }
 
-    const timer = setTimeout(() => setHide(true), 300);
+    const timer = setTimeout(() => setHide(true), 200);
     return () => clearTimeout(timer);
   }, [index]);
 

@@ -1,6 +1,9 @@
+import Magnetic from "./Magnetic";
+
 import React, { useState } from "react";
 import { portfolioImages } from "../assets/portfolioImages";
 import "./RecentWork.css";
+import "./MoreWorkBtn.css";
 
 const projects = [
   {
@@ -119,6 +122,14 @@ const RecentWork = () => {
             )}
           </div>
         ))}
+      </div>
+      <div className="h-0.5 w-[98%] bg-gray-300 mb-8 mx-auto rounded"></div>
+      <div className="flex justify-center my-24">
+        <Magnetic>
+          <button className="more-work-btn">
+            <span>More work</span>
+          </button>
+        </Magnetic>
       </div>
     </section>
   );

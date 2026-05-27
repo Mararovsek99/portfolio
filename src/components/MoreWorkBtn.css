@@ -1,0 +1,84 @@
+.more-work-btn {
+  position: relative;
+  overflow: hidden;
+
+  width: 200px;
+  height: 70px;
+
+  border-radius: 999px;
+  border: 1px solid #d7d7d7;
+
+  background: white;
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.25rem;
+  cursor: pointer;
+
+  transition: color 0.6s ease;
+
+  isolation: isolate;
+}
+
+.more-work-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.more-work-btn::before {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  border-radius: 50%;
+
+  background: #4c5cf0;
+
+  left: 50%;
+  top: 100%;
+
+  transform: translate(-50%, 35%);
+
+  z-index: 1;
+}
+
+/* TEXT */
+.more-work-btn:hover {
+  color: white;
+}
+
+/* HOVER IN */
+.more-work-btn:hover::before {
+  animation: circle-in 2.8s forwards cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* HOVER OUT */
+.more-work-btn:not(:hover)::before {
+  animation: circle-out 2.8s forwards cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes circle-in {
+  from {
+    transform: translate(-50%, 35%);
+  }
+
+  to {
+    transform: translate(-50%, -35%);
+  }
+}
+
+@keyframes circle-out {
+  from {
+    transform: translate(-50%, -35%);
+  }
+
+  to {
+    transform: translate(-50%, -140%);
+  }
+}
