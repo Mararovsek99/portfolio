@@ -1,9 +1,8 @@
-import { motion } from "motion/react";
-
+import { motion } from "framer-motion";
 const Intro = () => {
   return (
     <section className="bg-[#ffffff] text-black text-3xl p-10  flex flex-row gap-10 max-w-[1400px] m-auto mt-30">
-      <h2 className="text-5xl p-10">
+      <div className="text-5xl p-10">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +21,7 @@ const Intro = () => {
           Frontend Developer with real engineering experience in CAD/CAM and 3D
           modeling of cutting tools and mechanical parts.
         </motion.p>
-      </h2>
+      </div>
       <motion.h3
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
