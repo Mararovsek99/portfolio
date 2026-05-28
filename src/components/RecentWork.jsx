@@ -1,4 +1,5 @@
 import Magnetic from "./Magnetic";
+import { useEffect } from "react";
 
 import React, { useState } from "react";
 import { portfolioImages } from "../assets/portfolioImages";
@@ -51,9 +52,46 @@ const projects = [
 const RecentWork = () => {
   const [hovered, setHovered] = useState(null);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const [smoothMouse, setSmoothMouse] = useState({ x: 0, y: 0 });
+  const [viewMouse, setViewMouse] = useState({ x: 0, y: 0 });
 
+  useEffect(() => {
+    let animationFrame;
+
+    const animate = () => {
+      setSmoothMouse((prev) => ({
+        x: prev.x + (mouse.x - prev.x) * 0.1,
+        y: prev.y + (mouse.y - prev.y) * 0.1,
+      }));
+
+      animationFrame = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [mouse]);
+  useEffect(() => {
+    let animationFrame;
+
+    const animate = () => {
+      setViewMouse((prev) => ({
+        x: prev.x + (mouse.x - prev.x) * 0.18,
+        y: prev.y + (mouse.y - prev.y) * 0.18,
+      }));
+
+      animationFrame = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [mouse]);
   const handleMouseMove = (e) => {
-    setMouse({ x: e.clientX, y: e.clientY });
+    setMouse({
+      x: e.clientX,
+      y: e.clientY,
+    });
   };
 
   return (
@@ -92,10 +130,10 @@ const RecentWork = () => {
             {/* Hover image preview */}
             {hovered === idx && (
               <div
-                className="fixed z-50 pointer-events-none transition-transform duration-150"
+                className="fixed z-50 pointer-events-none"
                 style={{
-                  left: mouse.x - 200, // Center the image on cursor
-                  top: mouse.y - 200, // Center the image on cursor
+                  left: smoothMouse.x - 200,
+                  top: smoothMouse.y - 200,
                   boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
                   borderRadius: "12px",
                   background: "#adadad",
@@ -114,6 +152,26 @@ const RecentWork = () => {
                     objectFit: "contain",
                   }}
                 />
+
+                <div
+                  style={{
+                    position: "absolute",
+                    left: viewMouse.x - smoothMouse.x + 200 - 45,
+                    top: viewMouse.y - smoothMouse.y + 200 - 45,
+                    width: "90px",
+                    height: "90px",
+                    borderRadius: "50%",
+                    background: "#4c5cf0",
+                    color: "white",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "1rem",
+                    fontWeight: 500,
+                  }}
+                >
+                  View
+                </div>
               </div>
             )}
             {/* Border below each project except last */}
