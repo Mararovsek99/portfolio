@@ -93,6 +93,17 @@ const RecentWork = () => {
       y: e.clientY,
     });
   };
+  const handleMouseEnter = (e, idx) => {
+    const position = {
+      x: e.clientX,
+      y: e.clientY,
+    };
+
+    setHovered(idx);
+    setMouse(position);
+    setSmoothMouse(position);
+    setViewMouse(position);
+  };
 
   return (
     <section className="bg-[#ffffff] text-black p-10 max-w-[1600px] m-auto mt-30 select-none">
@@ -105,7 +116,7 @@ const RecentWork = () => {
           <div
             key={project.title}
             className="flex items-center justify-between py-8 px-2 relative group cursor-pointer"
-            onMouseEnter={() => setHovered(idx)}
+            onMouseEnter={(e) => handleMouseEnter(e, idx)}
             onMouseLeave={() => setHovered(null)}
             onMouseMove={handleMouseMove}
             onClick={() => window.open(project.url, "_blank")}

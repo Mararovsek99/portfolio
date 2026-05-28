@@ -24,7 +24,7 @@ const Footer = () => {
             className="w-20 h-20 rounded-full object-cover mt-2"
           />
 
-          <h2 className="text-[clamp(3rem,6vw,6rem)] leading-[0.95] tracking-[-0.05em]">
+          <h2 className="text-[clamp(3rem,5vw,5rem)] leading-[0.95] tracking-[-0.05em]">
             Developer <br />
             Available for work
           </h2>
