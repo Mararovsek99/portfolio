@@ -16,7 +16,7 @@ const Hero = () => {
     <>
       <section className="bg-[#999d9e] h-screen text-white text-md overflow-hidden relative">
         <img
-          src="/hero_andrej.png"
+          src="/hero_andrej.webp"
           alt="author of the page"
           className="h-screen absolute left-1/2 top-0"
           style={{
