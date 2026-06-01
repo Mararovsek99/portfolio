@@ -1,7 +1,5 @@
 import Magnetic from "./Magnetic";
-import { useEffect } from "react";
-
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { portfolioImages } from "../assets/portfolioImages";
 import "./RecentWork.css";
 import "./MoreWorkBtn.css";
@@ -54,6 +52,17 @@ const RecentWork = () => {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const [smoothMouse, setSmoothMouse] = useState({ x: 0, y: 0 });
   const [viewMouse, setViewMouse] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      projects.forEach((project) => {
+        const img = new Image();
+        img.src = project.image;
+      });
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     let animationFrame;
