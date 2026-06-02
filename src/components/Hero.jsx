@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 import GlobeIcon from "./GlobeIcon";
 import { GoArrowDownRight } from "react-icons/go";
 import { useState, useEffect } from "react";
@@ -31,8 +30,6 @@ const Hero = () => {
             </div>
           </div>
         </section>
-        {/* nav bar */}
-        {Navbar()}
 
         <div className="absolute left-0 top-1/2  -translate-y-1/2 bg-black/80 rounded-r-full flex justify-center items-center gap-4">
           <div className="flex flex-col m-5 ml-10">

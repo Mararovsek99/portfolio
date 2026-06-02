@@ -1,25 +1,27 @@
-import Hero from "./components/Hero";
-import Intro from "./components/Intro";
-import Footer from "./components/Footer";
-import RecentWork from "./components/RecentWork";
-import Opening from "./components/Opening";
-import { defineElement } from "@lordicon/element";
-import Menu from "./components/Menu";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-defineElement();
+import Menu from "./components/Menu";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
-    <>
-      <main>
-        <Menu />
-        <Opening />
-        <Hero />
-        <Intro />
-        <RecentWork />
-        <Footer />
-      </main>
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Menu />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
   );
 };
 
