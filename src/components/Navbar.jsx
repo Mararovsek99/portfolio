@@ -1,7 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Magnetic from "./Magnetic";
 
 const Navbar = () => {
+  const location = useLocation();
+  const isLightPage = ["/about", "/contact"].includes(location.pathname);
+
+  const textClass = isLightPage ? "text-black" : "text-white";
+  const accentClass = isLightPage ? "bg-black" : "bg-white";
+
   const buttons = [
     { name: "About", to: "/about" },
     { name: "Projects", to: "/projects" },
@@ -9,11 +15,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="absolute left-0 top-0 z-[1000] flex w-full justify-between p-8">
+    <nav
+      className={`absolute left-0 top-0 z-[1000] flex w-full justify-between p-8 ${textClass}`}
+    >
       <Magnetic>
         <Link
           to="/"
-          className="group inline-flex cursor-pointer items-center gap-1 p-2 text-lg text-white"
+          className={`group inline-flex cursor-pointer items-center gap-1 p-2 text-lg ${textClass}`}
         >
           <span className="inline-block transition-transform duration-700 ease-out group-hover:-rotate-[360deg]">
             ©
@@ -38,11 +46,13 @@ const Navbar = () => {
               to={button.to}
               className="group flex flex-col items-center justify-center"
             >
-              <span className="rounded-lg p-2 text-xl text-white">
+              <span className={`rounded-lg p-2 text-xl ${textClass}`}>
                 {button.name}
               </span>
 
-              <span className="inline-block h-2 w-2 scale-0 rounded-full bg-white transition group-hover:scale-100" />
+              <span
+                className={`inline-block h-2 w-2 scale-0 rounded-full ${accentClass} transition group-hover:scale-100`}
+              />
             </Link>
           </Magnetic>
         ))}
