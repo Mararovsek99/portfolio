@@ -13,7 +13,7 @@ const iconSkills = [
   },
   {
     label: "Tailwind CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
     label: "HTML5",
@@ -37,7 +37,16 @@ const AboutSkills = () => {
         {iconSkills.map((skill) => (
           <div key={skill.label} className="skill-card">
             <div className="skill-card__icon">
-              <img src={skill.icon} alt={skill.label} loading="lazy" />
+              <img
+                src={skill.icon}
+                alt={skill.label}
+                loading="lazy"
+                onError={(event) => {
+                  event.currentTarget.onerror = null;
+                  event.currentTarget.src =
+                    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg";
+                }}
+              />
             </div>
             <div className="skill-card__name">{skill.label}</div>
           </div>

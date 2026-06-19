@@ -20,6 +20,8 @@ const Hero = () => {
           className="h-screen absolute left-1/2 top-0"
           style={{
             transform: `translateX(-50%) translateY(${scrollY * 0.2}px)`,
+            objectFit: "cover",
+            objectPosition: "center",
           }}
         />
         <section className="pointer-events-none absolute top-0 w-screen h-screen overflow-hidden  flex items-end">

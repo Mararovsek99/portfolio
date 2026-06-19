@@ -1,56 +1,21 @@
 const AboutHero = () => {
   return (
-    <section className="min-h-screen bg-white px-6 md:px-12 lg:px-24 py-20 flex items-center">
-      <div className="mx-auto max-w-7xl w-full grid lg:grid-cols-2 gap-16 items-center">
-        {/* Left Side */}
-        <div className="flex flex-col items-center lg:items-start">
-          <div className="relative">
-            {/* Background Shape */}
-            <div className="absolute inset-0 translate-y-4 -translate-x-4 scale-110 rounded-[40%] bg-neutral-200 -z-10" />
+    <section className="relative min-h-screen px-6 md:px-12 lg:px-24 py-20 overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/about_hero_andrej.webp')" }}
+      />
+      <div className="absolute inset-0 " />
 
-            {/* Your Image */}
-            <img
-              src="/images/profile.png"
-              alt="Andrej"
-              className="w-[280px] md:w-[340px] object-contain"
-            />
-          </div>
+      <div className="relative mx-auto max-w-7xl w-full grid lg:grid-cols-2 gap-16 items-center">
+        <div className="hidden lg:block" />
 
-          <div className="flex items-center gap-5 mt-8 text-sm">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:opacity-60 transition"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:opacity-60 transition"
-            >
-              LinkedIn
-            </a>
-
-            <a
-              href="mailto:your@email.com"
-              className="hover:opacity-60 transition"
-            >
-              Email
-            </a>
-          </div>
-        </div>
-
-        {/* Right Side */}
-        <div>
+        <div className="bg-white/95 backdrop-blur-xl rounded-[36px] shadow-[0_30px_80px_rgba(0,0,0,0.18)] p-10 md:p-14">
           <span className="uppercase tracking-[0.25em] text-sm text-neutral-500">
             About Me
           </span>
 
-          <h1 className="text-5xl md:text-6xl font-medium mt-4">
+          <h1 className="text-5xl md:text-6xl font-medium mt-4 text-black">
             Hi, I'm Andrej
           </h1>
 
@@ -73,31 +38,14 @@ const AboutHero = () => {
             </p>
           </div>
 
-          <div className="mt-10 space-y-2 text-sm md:text-base">
-            <p>
-              <span className="font-semibold">Frontend:</span> React · Next.js ·
-              Tailwind CSS
-            </p>
-
-            <p>
-              <span className="font-semibold">Tools:</span> Git · GitHub · VS
-              Code · AI Tools
-            </p>
-
-            <p>
-              <span className="font-semibold">Technical:</span> CNC · CAD/CAM ·
-              Automation · Mechatronics
-            </p>
-          </div>
-
-          <div className="flex gap-12 mt-12">
+          <div className="flex flex-col gap-6 mt-10 md:flex-row md:gap-12">
             <div>
-              <h2 className="text-4xl font-semibold">10+</h2>
+              <h2 className="text-4xl font-semibold text-black">10+</h2>
               <p className="text-neutral-500 text-sm mt-1">Personal Projects</p>
             </div>
 
             <div>
-              <h2 className="text-4xl font-semibold">AI</h2>
+              <h2 className="text-4xl font-semibold text-black">AI</h2>
               <p className="text-neutral-500 text-sm mt-1">
                 Assisted Development
               </p>
