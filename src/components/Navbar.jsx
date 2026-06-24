@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`absolute left-0 top-0 z-[1000] hidden md:flex w-full justify-between p-8 ${textClass}`}
+      className={`absolute left-0 top-0 z-[1000] flex w-full justify-between p-8 ${textClass}`}
     >
       <Magnetic>
         <Link
@@ -39,7 +39,7 @@ const Navbar = () => {
         </Link>
       </Magnetic>
 
-      <div className="flex items-center gap-4">
+      <div className="hidden md:flex items-center gap-4">
         {buttons.map((button) => (
           <Magnetic key={button.name}>
             <Link
