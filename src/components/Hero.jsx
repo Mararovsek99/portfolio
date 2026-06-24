@@ -33,15 +33,18 @@ const Hero = () => {
           </div>
         </section>
 
-        <div className="absolute left-0 top-6/8  md:top-1/2  -translate-y-1/2 bg-black/80 rounded-r-full flex justify-center items-center gap-4">
+        <div className="hidden md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 md:bg-black/80 md:rounded-r-full md:flex md:justify-center md:items-center md:gap-4">
           <div className="flex flex-col m-5 ml-10">
             <span className="text-xl">Located</span>
             <span className="text-xl">in the</span>
             <span className="text-xl">Slovenia</span>
           </div>
-          <div className=" bg-[#999d9e] rounded-full h-20 w-20 m-5">
+          <div className="relative rounded-full h-20 w-20 m-5">
             <GlobeIcon className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
           </div>
+        </div>
+        <div className="absolute right-4 bottom-4 md:hidden rounded-full h-20 w-20 flex items-center justify-center shadow-xl shadow-black/30">
+          <GlobeIcon className="h-10 w-10" />
         </div>
         <div className="absolute right-0 top-1/2  md:-translate-y-25  lg:-translate-y-40 -translate-y-20 -translate-x-10 md:-translate-x-..host0 flex flex-col md:gap-5 lg:gap-10">
           <div>

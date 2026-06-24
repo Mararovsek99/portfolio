@@ -21,6 +21,29 @@
   padding-right: 5rem;
   flex-shrink: 0;
 }
+
+@media (max-width: 1024px) {
+  .marquee-track {
+    animation-duration: 10s;
+  }
+
+  .marquee-track h1 {
+    font-size: 18vw;
+    padding-right: 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .marquee-track {
+    animation-duration: 8s;
+  }
+
+  .marquee-track h1 {
+    font-size: 22vw;
+    padding-right: 3rem;
+  }
+}
+
 html,
 body {
   scrollbar-width: none; /* Firefox */
