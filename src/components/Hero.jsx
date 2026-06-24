@@ -24,7 +24,7 @@ const Hero = () => {
             objectPosition: "center",
           }}
         />
-        <section className="pointer-events-none absolute top-0 w-screen h-screen overflow-hidden  flex items-end">
+        <section className="pointer-events-none absolute top-2/3 h-1/3 w-screen overflow-hidden flex items-start md:top-0 md:h-screen md:items-end">
           <div className="marquee">
             <div className="marquee-track">
               <h1>Andrej Marovšek -</h1>
