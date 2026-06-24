@@ -24,7 +24,7 @@ const Hero = () => {
             objectPosition: "center",
           }}
         />
-        <section className="pointer-events-none absolute top-2/3 h-1/3 w-screen overflow-hidden flex items-start md:top-0 md:h-screen md:items-end">
+        <section className="pointer-events-none absolute top-[60%] h-1/3 w-screen overflow-hidden flex items-start md:top-0 md:h-screen md:items-end">
           <div className="marquee">
             <div className="marquee-track">
               <h1>Andrej Marovšek -</h1>
@@ -46,13 +46,23 @@ const Hero = () => {
         <div className="absolute right-4 bottom-4 md:hidden rounded-full h-20 w-20 flex items-center justify-center shadow-xl shadow-black/30">
           <GlobeIcon className="h-10 w-10" />
         </div>
-        <div className="absolute right-0 top-1/2  md:-translate-y-25  lg:-translate-y-40 -translate-y-20 -translate-x-10 md:-translate-x-..host0 flex flex-col md:gap-5 lg:gap-10">
+        <div className="md:absolute md:right-0 md:top-1/2 md:-translate-y-25 md:lg:-translate-y-40 md:-translate-y-20 md:-translate-x-10 md:flex md:flex-col md:gap-5 md:lg:gap-10 ">
           <div>
             <GoArrowDownRight className="h-10 w-10 mb-2" />
           </div>
           <div className="flex flex-col m-2 md:mr-10 lg:mr-20 gap-2">
             <span className="md:text-4xl lg:text-5xl">Web Developer</span>
             <span className="lg:text-4xl">with Engineering Expertise</span>
+          </div>
+        </div>
+
+        <div className="absolute left-0 bottom-0 md:hidden flex flex-col gap-3 ml-4 mb-4">
+          <div>
+            <GoArrowDownRight className="h-8 w-8 mb-2" />
+          </div>
+          <div className="flex flex-col gap-1">
+            <span className="text-3xl">Web Developer</span>
+            <span className="text-lg">with Engineering Expertise</span>
           </div>
         </div>
       </section>
