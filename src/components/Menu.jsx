@@ -4,10 +4,12 @@ import Magnetic from "./Magnetic";
 const Menu = () => {
   const [open, setOpen] = useState(false);
   const [showButton, setShowButton] = useState(false);
+  const [mobileScrolled, setMobileScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setShowButton(window.scrollY > 120);
+      setMobileScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,11 +41,14 @@ const Menu = () => {
         <Magnetic>
           <button
             onClick={() => setOpen(!open)}
-            className="
+            className={`
               flex h-16 w-16 items-center justify-center
-              rounded-full bg-[#1c1d20] text-white
+              rounded-full text-white
               md:h-20 md:w-20
-            "
+              transition-all duration-300 ease-out
+              ${mobileScrolled ? "bg-[#1c1d20]" : "bg-transparent md:bg-[#1c1d20]"}
+              hover:scale-110 active:scale-95
+            `}
           >
             <div className="flex flex-col gap-2">
               <span
