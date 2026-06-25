@@ -17,11 +17,11 @@ const Hero = () => {
         <img
           src="/hero_andrej.webp"
           alt="author of the page"
-          className="h-screen absolute left-[60%] md:left-[50%] top-[10%]"
+          className="h-screen absolute left-[50%] top-[10%]"
           style={{
             transform: `translateX(-50%) translateY(${scrollY * 0.2}px)`,
             objectFit: "cover",
-            objectPosition: "center",
+            objectPosition: "42% center",
           }}
         />
         <section className="pointer-events-none absolute top-[60%] h-1/3 w-screen overflow-hidden flex items-start md:top-0 md:h-screen md:items-end">
