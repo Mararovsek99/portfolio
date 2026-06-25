@@ -23,10 +23,6 @@
 }
 
 @media (max-width: 1024px) {
-  .hero-image {
-    left: 55%;
-  }
-
   .marquee-track {
     animation-duration: 10s;
   }
@@ -38,10 +34,6 @@
 }
 
 @media (max-width: 640px) {
-  .hero-image {
-    left: 56%;
-  }
-
   .marquee-track h1 {
     font-size: 35vw;
     padding-right: 3rem;
@@ -52,6 +44,7 @@ html,
 body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Old Edge */
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar,
