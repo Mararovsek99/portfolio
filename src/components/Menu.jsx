@@ -21,7 +21,7 @@ const Menu = () => {
   const links = [
     { name: "Home", href: "#home" },
     { name: "Work", href: "#projects" },
-    { name: "About", href: "#about" },
+    { name: "About", href: "/about" },
     { name: "Contact", href: "#contact" },
   ];
 
