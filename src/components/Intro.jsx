@@ -24,7 +24,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <section className="relative bg-[#ffffff] text-black text-3xl md:p-10 p-2  flex md:flex-row flex-col gap-10 max-w-[1400px] m-auto md:mt-30 mt-16">
+    <section className="relative bg-[#ffffff] text-black text-3xl md:p-10 p-2  flex md:flex-row flex-col gap-10 max-w-[1400px] m-auto md:mt-30 mt-25">
       <div className="text-5xl md:p-10 p-2">
         <motion.p
           initial={{ opacity: 0, y: 20 }}

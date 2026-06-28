@@ -115,12 +115,39 @@ const RecentWork = () => {
   };
 
   return (
-    <section className="bg-[#ffffff] text-black p-10 max-w-[1600px] m-auto mt-30 select-none">
+    <section className="bg-[#ffffff] text-black px-4 md:px-10 py-10 max-w-[1600px] m-auto mt-30 select-none">
       <h4 className="text-gray-500 uppercase text-sm mb-10 ml-16">
         Recent work
       </h4>
       <div className="h-0.5 w-[98%] bg-gray-300 mb-8 mx-auto rounded"></div>
-      <div>
+      <div className="lg:hidden grid grid-cols-1 gap-6 md:grid-cols-2">
+        {projects.map((project) => (
+          <div
+            key={project.title}
+            className="group cursor-pointer overflow-hidden bg-white transition-all duration-300"
+            onClick={() => window.open(project.url, "_blank")}
+          >
+            <div className="flex aspect-square items-center justify-center overflow-hidden bg-gradient-to-br from-[#f4f4f4] to-[#dfdfdf] p-4 md:p-6">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-[88%] w-[88%] object-contain"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="mb-4 text-3xl font-semibold text-black">
+                {project.title}
+              </h3>
+              <div className="mb-3 h-px w-full bg-gray-300" />
+              <div className="text-sm font-medium text-gray-700">
+                {project.technologies.join("  |  ")}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="hidden lg:block">
         {projects.map((project, idx) => (
           <div
             key={project.title}
