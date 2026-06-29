@@ -115,11 +115,11 @@ const RecentWork = () => {
   };
 
   return (
-    <section className="bg-[#ffffff] text-black px-4 md:px-10 py-10 max-w-[1600px] m-auto mt-30 select-none">
-      <h4 className="text-gray-500 uppercase text-sm mb-10 ml-16">
+    <section className="bg-[#ffffff] text-black px-4 md:px-10 py-10 max-w-[1600px] m-auto mt-45 select-none">
+      <h4 className="text-gray-500 uppercase text-sm mb-10 ml-16 hidden md:block">
         Recent work
       </h4>
-      <div className="h-0.5 w-[98%] bg-gray-300 mb-8 mx-auto rounded"></div>
+      <div className="h-0.5 w-[98%] bg-gray-300 mb-8 mx-auto rounded hidden md:block"></div>
       <div className="lg:hidden grid grid-cols-1 gap-6 md:grid-cols-2">
         {projects.map((project) => (
           <div
@@ -228,7 +228,7 @@ const RecentWork = () => {
           </div>
         ))}
       </div>
-      <div className="h-0.5 w-[98%] bg-gray-300 mb-8 mx-auto rounded"></div>
+      <div className="h-0.5 w-[98%] bg-gray-300 mb-8 mx-auto rounded hidden md:block"></div>
       <div className="flex justify-center my-24">
         <Magnetic>
           <button className="more-work-btn">
