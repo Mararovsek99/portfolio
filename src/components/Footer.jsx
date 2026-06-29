@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="relative min-h-screen bg-[#1c1d20] px-8 py-16 text-white overflow-hidden"
+      className="relative min-h-screen bg-[#1c1d20] px-8 py-16 text-white overflow-hidden md:min-h-[90vh]"
     >
       <div className="max-w-[1350px] mx-auto pt-28">
         <div className="flex items-start gap-8">
@@ -34,64 +34,72 @@ const Footer = () => {
           <motion.a
             href="mailto:andrej.marovsek99@gmail.com"
             style={{ x }}
-            className="absolute right-[15%] top-1/2 -translate-y-1/2 w-44 h-44 rounded-full bg-[#4c5cf0] flex items-center justify-center text-white text-sm"
+            className="absolute left-[calc(50%-70px)] top-1/2 -translate-y-1/2 flex h-28 w-28 items-center justify-center rounded-full bg-[#4c5cf0] text-sm text-white sm:left-[calc(50%-80px)] sm:h-32 sm:w-32 md:right-[15%] md:left-auto md:h-44 md:w-44"
           >
             Get in touch
           </motion.a>
         </div>
 
-        <div className="mt-24 flex gap-4 flex-wrap">
+        <div className="mt-24 mb-46 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
           <a
             href="mailto:andrej.marovsek99@gmail.com"
-            className="border border-white/20 rounded-full px-8 py-5"
+            className="rounded-full border border-white/20 px-8 py-5 text-center"
           >
             andrej.marovsek99@gmail.com
           </a>
 
           <a
             href="tel:+38651218722"
-            className="border border-white/20 rounded-full px-8 py-5"
+            className="mb-4 rounded-full border border-white/20 px-8 py-5 text-center sm:mb-0"
           >
             +386 51 218 722
           </a>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-8 right-8 flex items-end gap-20">
-        <div>
-          <p className="text-xs text-white/40 mb-4">VERSION</p>
+      <div className="absolute bottom-8 left-8 right-8 flex flex-col items-start gap-10 md:items-center lg:flex-row lg:items-center lg:gap-20">
+        {/* Desktop only */}
+        <div className="hidden lg:block">
+          <p className="mb-4 text-xs text-white/40">VERSION</p>
           <p>2026 © Edition</p>
         </div>
 
-        <div>
-          <p className="text-xs text-white/40 mb-4">LOCAL TIME</p>
+        {/* Desktop only */}
+        <div className="hidden lg:block">
+          <p className="mb-4 text-xs text-white/40">LOCAL TIME</p>
           <p>Slovenia GMT+2</p>
         </div>
 
-        <div className="absolute left-1/2 -translate-x-1/2 text-center">
-          <p className="text-xs text-white/40 mb-4">CREDITS</p>
+        {/* Credits */}
+        <div className="order-2 text-left md:text-center lg:order-none lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+          <p className="mb-4 text-xs text-white/40">CREDITS</p>
 
-          <div className="flex gap-2 text-sm">
+          <div className="flex flex-wrap gap-2 text-sm md:justify-center">
             <span className="text-white/40">Inspired by</span>
 
             <a
               href="https://www.linkedin.com/in/dennissnellenberg/"
               target="_blank"
-              className="hover:text-white transition-colors"
+              className="transition-colors hover:text-white"
             >
               Dennis Snellenberg
             </a>
+            <div className="basis-full md:hidden" />
 
-            <span className="text-white/40">-</span>
+            <span className="hidden text-white/40 lg:block">-</span>
 
-            <span>Built by Andrej Marovšek</span>
+            <span className="text-white/40">Built by</span>
+            <span>Andrej Marovšek</span>
           </div>
         </div>
 
-        <div className="ml-auto">
-          <p className="text-xs text-white/40 mb-4">SOCIALS</p>
+        {/* Socials */}
+        <div className="order-1 flex flex-col items-start md:items-center lg:order-none lg:ml-auto lg:items-center">
+          <p className="mb-4 text-xs text-white/40">SOCIALS</p>
+
           <div className="flex gap-8">
             <a href="https://github.com/Mararovsek99">GitHub</a>
+
             <a href="https://www.linkedin.com/in/andrej-marov%C5%A1ek-78b040206/">
               LinkedIn
             </a>
