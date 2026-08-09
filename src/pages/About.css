@@ -1,84 +1,13 @@
 .about-page {
   min-height: 100vh;
-  background: #090909;
-  color: #e8e8e8;
+  background: #f8fafc;
+  color: #111827;
   padding: 4rem 2rem 5rem;
 }
 
 .about-page__container {
   max-width: 1160px;
   margin: 0 auto;
-}
-
-.about-hero {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 3rem;
-  align-items: start;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.about-hero__content {
-  max-width: 720px;
-}
-
-.about-hero__eyebrow {
-  display: inline-block;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-  letter-spacing: 0.45em;
-  text-transform: uppercase;
-  color: #f9c11d;
-}
-
-.about-hero__title {
-  font-size: clamp(3rem, 5vw, 4.8rem);
-  line-height: 1.02;
-  margin-bottom: 1.5rem;
-  color: #ffffff;
-}
-
-.about-hero__text-group p {
-  color: #c7c7c7;
-  line-height: 1.9;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-}
-
-.about-hero__cards {
-  display: grid;
-  gap: 1rem;
-}
-
-.about-card {
-  position: relative;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 28px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.28);
-}
-
-.about-card__label {
-  display: inline-block;
-  font-size: 0.78rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: #f9c11d;
-  margin-bottom: 1rem;
-}
-
-.about-card h2 {
-  font-size: 1.35rem;
-  color: #ffffff;
-  margin-bottom: 0.9rem;
-}
-
-.about-card p {
-  color: #b8b8b8;
-  line-height: 1.9;
-  font-size: 0.98rem;
 }
 
 .about-skills {
@@ -93,7 +22,7 @@
 }
 
 .skills-headline__label {
-  color: #f9c11d;
+  color: #2563eb;
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.35em;
@@ -102,7 +31,7 @@
 .skills-headline__line {
   flex: 1;
   height: 1px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.1);
 }
 
 .skills-grid {
@@ -114,21 +43,20 @@
 
 .skill-card {
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
   padding: 1.6rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-4px);
-  border-color: #f9c11d;
+  transform: translateY(-3px);
+  border-color: #2563eb;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
 }
 
 .skill-card__icon {
@@ -137,7 +65,7 @@
   border-radius: 18px;
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.08);
+  background: #eff6ff;
 }
 
 .skill-card__icon img {
@@ -149,7 +77,7 @@
 .skill-card__name {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #111827;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   text-align: center;
@@ -157,21 +85,22 @@
 
 .skill-lists {
   display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
 .skill-lists article {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 24px;
   padding: 1.75rem;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.05);
 }
 
 .skill-lists h3 {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #111827;
 }
 
 .skill-lists ul {
@@ -185,7 +114,7 @@
 .skill-lists li {
   position: relative;
   padding-left: 1.6rem;
-  color: #c7c7c7;
+  color: #475569;
   line-height: 1.7;
   font-size: 0.97rem;
 }
@@ -198,14 +127,10 @@
   width: 6px;
   height: 6px;
   border-radius: 999px;
-  background: #f9c11d;
+  background: #2563eb;
 }
 
 @media (max-width: 1080px) {
-  .about-hero {
-    grid-template-columns: 1fr;
-  }
-
   .skill-lists {
     grid-template-columns: 1fr;
   }
@@ -214,14 +139,6 @@
 @media (max-width: 680px) {
   .about-page {
     padding: 2.5rem 1.25rem 4rem;
-  }
-
-  .about-hero__title {
-    font-size: 2.6rem;
-  }
-
-  .about-card {
-    padding: 1.6rem;
   }
 
   .skill-card {
