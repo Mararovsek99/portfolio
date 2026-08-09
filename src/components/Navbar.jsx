@@ -1,8 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import Magnetic from "./Magnetic";
 
-const Navbar = () => {
+const Navbar = ({ hidden }) => {
   const location = useLocation();
+
+  if (hidden) {
+    return null;
+  }
   const isLightPage = ["/about", "/contact"].includes(location.pathname);
 
   const textClass = isLightPage ? "text-black" : "text-white";
@@ -10,7 +14,7 @@ const Navbar = () => {
 
   const buttons = [
     { name: "About", to: "/about" },
-    { name: "Projects", to: "/projects" },
+    { name: "Work", to: "https://github.com/Mararovsek99", external: true },
     { name: "Contact", to: "/contact" },
   ];
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Magnetic from "./Magnetic";
 
-const Menu = () => {
+const Menu = ({ openingComplete }) => {
   const [open, setOpen] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const [mobileScrolled, setMobileScrolled] = useState(false);
@@ -20,7 +20,7 @@ const Menu = () => {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "Work", href: "#projects" },
+    { name: "Work", href: "https://github.com/Mararovsek99", external: true },
     { name: "About", href: "/about" },
     { name: "Contact", href: "#contact" },
   ];
@@ -31,6 +31,7 @@ const Menu = () => {
         className={`
           fixed right-6 top-6 z-[9999]
           transition-all duration-300
+          ${openingComplete ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none"}
           ${
             showButton
               ? "md:opacity-100 md:scale-100"
@@ -97,6 +98,8 @@ const Menu = () => {
                     <a
                       onClick={() => setOpen(false)}
                       href={link.href}
+                      target={link.external ? "_blank" : undefined}
+                      rel={link.external ? "noreferrer" : undefined}
                       className="flex items-center gap-4"
                     >
                       {index === 0 && <span className="text-2xl">•</span>}

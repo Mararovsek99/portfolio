@@ -3,7 +3,7 @@ import "./Opening.css";
 
 const greetings = ["Hello", "Hola", "Bonjour", "Hallo", "Ciao"];
 
-const Opening = () => {
+const Opening = ({ onFinished }) => {
   const [index, setIndex] = useState(0);
   const [hide, setHide] = useState(false);
 
@@ -35,11 +35,14 @@ const Opening = () => {
         document.body.style.width = "";
 
         window.scrollTo(0, scrollY);
+        if (onFinished) {
+          onFinished();
+        }
       }, 900);
 
       return () => clearTimeout(timer);
     }
-  }, [hide]);
+  }, [hide, onFinished]);
 
   useEffect(() => {
     if (index < greetings.length - 1) {

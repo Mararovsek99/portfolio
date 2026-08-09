@@ -231,9 +231,14 @@ const RecentWork = () => {
       <div className="h-0.5 w-[98%] bg-gray-300 mb-8 mx-auto rounded hidden md:block"></div>
       <div className="flex justify-center my-24">
         <Magnetic>
-          <button className="more-work-btn">
+          <a
+            href="https://github.com/Mararovsek99"
+            target="_blank"
+            rel="noreferrer"
+            className="more-work-btn inline-flex"
+          >
             <span>More work</span>
-          </button>
+          </a>
         </Magnetic>
       </div>
     </section>

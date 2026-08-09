@@ -3,10 +3,10 @@ import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 import RecentWork from "../components/RecentWork";
 
-const Home = () => {
+const Home = ({ onOpeningComplete }) => {
   return (
     <>
-      <Opening />
+      <Opening onFinished={onOpeningComplete} />
       <Hero />
       <Intro />
       <RecentWork />
