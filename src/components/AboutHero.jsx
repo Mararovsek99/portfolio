@@ -18,9 +18,9 @@ const AboutHero = () => {
 
           <div className="mt-8 space-y-5 text-lg leading-8 text-slate-600 max-w-2xl">
             <p>
-              I currently work in mechatronics, designing and constructing cutting
-              tools for the metal and wood industry while learning web development
-              and building real-world projects.
+              I currently work in mechatronics, designing and constructing
+              cutting tools for the metal and wood industry while learning web
+              development and building real-world projects.
             </p>
 
             <p>
