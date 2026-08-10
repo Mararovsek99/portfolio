@@ -1,59 +1,82 @@
+import GlobeIcon from "./GlobeIcon";
+
 const AboutHero = () => {
   return (
-    <section className="relative min-h-screen bg-[#f8fafc] px-6 md:px-12 lg:px-24 py-20">
-      <div className="mx-auto max-w-7xl grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center">
-        <div className="space-y-8">
-          <span className="uppercase tracking-[0.28em] text-sm text-slate-500">
-            About Me
-          </span>
-
-          <h1 className="text-5xl md:text-6xl font-semibold text-slate-950">
-            Hi, I'm Andrej
-          </h1>
-
-          <p className="mt-4 text-xl text-slate-600 max-w-2xl">
-            Frontend Developer focused on React, Next.js and modern web
-            interfaces.
-          </p>
-
-          <div className="mt-8 space-y-5 text-lg leading-8 text-slate-600 max-w-2xl">
-            <p>
-              I currently work in mechatronics, designing and constructing
-              cutting tools for the metal and wood industry while learning web
-              development and building real-world projects.
-            </p>
-
-            <p>
-              My background includes CNC programming, CAD/CAM, automation and
-              engineering problem solving, which helps me approach software
-              development with a practical and results-driven mindset.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid gap-6">
-          <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
-            <span className="uppercase tracking-[0.28em] text-xs text-slate-500">
-              Experience
+    <section className="bg-[#f7f7f5] text-[#1d1d1f]">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 md:px-12 lg:px-16">
+        <div className="min-h-[85vh] flex flex-col justify-center py-24 md:py-32">
+          {/* Small label */}
+          <div className="mb-12 md:mb-20">
+            <span className="text-xs uppercase tracking-[0.22em] text-black/45">
+              About me
             </span>
-            <h2 className="mt-5 text-4xl font-semibold text-slate-950">10+</h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              Years of engineering and web development experience across design,
-              tooling, and frontend applications.
-            </p>
           </div>
 
-          <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
-            <span className="uppercase tracking-[0.28em] text-xs text-slate-500">
-              Approach
-            </span>
-            <h2 className="mt-5 text-4xl font-semibold text-slate-950">
-              Practical & Minimal
-            </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              I build clean, fast interfaces with a strong focus on usability,
-              performance, and thoughtful engineering.
-            </p>
+          {/* Main title */}
+          <div className="max-w-5xl">
+            <h1 className="text-[clamp(3.2rem,8vw,7rem)] leading-[0.92] tracking-[-0.055em] font-medium">
+              Developer with
+              <br />
+              an engineering mind.
+            </h1>
+          </div>
+
+          {/* Divider */}
+          <div className="relative mt-14 md:mt-20">
+            <div className="h-px w-full bg-black/15" />
+
+            <div
+              className="
+              absolute right-[8%] top-1/2
+              flex h-20 w-20 -translate-y-1/2
+              items-center justify-center rounded-full
+              bg-[#4657f5] text-white
+              md:h-24 md:w-24
+            "
+            >
+              <GlobeIcon size="2.25rem" />
+            </div>
+          </div>
+
+          {/* Bottom content */}
+          <div
+            className="
+            mt-16
+            grid gap-10
+            md:mt-20
+            md:grid-cols-[0.55fr_1fr_1fr]
+            md:gap-12
+          "
+          >
+            <div className="hidden md:block">
+              <span className="text-2xl font-light">↓</span>
+            </div>
+
+            <div>
+              <p className="text-xl md:text-2xl leading-snug tracking-[-0.025em]">
+                Hi, I'm Andrej — a frontend developer focused on building clean,
+                responsive and modern web experiences.
+              </p>
+            </div>
+
+            <div className="max-w-md">
+              <p className="text-sm md:text-base leading-7 text-black/65">
+                I work with React, Next.js, JavaScript and Tailwind CSS,
+                creating interfaces that combine clean design with practical
+                functionality.
+              </p>
+
+              <p className="mt-5 text-sm md:text-base leading-7 text-black/65">
+                My background in mechatronics, CNC programming and CAD/CAM gives
+                me a different perspective on software development — structured
+                thinking, technical problem solving and attention to detail are
+                a natural part of the way I work.
+              </p>
+
+              <p className="mt-6 text-xs text-black/35">
+                Always learning. Always building.
+              </p>
+            </div>
           </div>
         </div>
       </div>

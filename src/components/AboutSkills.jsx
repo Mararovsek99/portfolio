@@ -1,92 +1,142 @@
-const iconSkills = [
-  {
-    label: "React",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
-    label: "Next.js",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  },
-  {
-    label: "JavaScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-  {
-    label: "Tailwind CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-  },
-  {
-    label: "HTML5",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  },
-  {
-    label: "CSS3",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  },
+const frontendSkills = [
+  "React",
+  "Next.js",
+  "JavaScript",
+  "Tailwind CSS",
+  "HTML5",
+  "CSS3",
+  "Responsive Design",
+];
+
+const workflowSkills = [
+  "Git / GitHub",
+  "Vercel",
+  "VS Code",
+  "SEO Basics",
+  "UI / UX",
+  "Performance",
+  "TypeScript — learning",
+];
+
+const engineeringSkills = [
+  "SolidWorks",
+  "SolidCAM",
+  "CAD / CAM",
+  "CNC Programming",
+  "Automation",
+  "Technical Design",
+  "Problem Solving",
 ];
 
 const AboutSkills = () => {
   return (
-    <section className="about-skills">
-      <div className="skills-headline">
-        <span className="skills-headline__label">Technical Skills</span>
-        <span className="skills-headline__line" />
-      </div>
+    <section className="bg-[#e9e9e7] text-[#1d1d1f]">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 md:px-12 lg:px-16 py-24 md:py-32">
+        {/* Section heading */}
+        <div className="mb-16 md:mb-24">
+          <span className="mb-5 block text-xs uppercase tracking-[0.22em] text-black/40">
+            Technical skills
+          </span>
 
-      <div className="skills-grid">
-        {iconSkills.map((skill) => (
-          <div key={skill.label} className="skill-card">
-            <div className="skill-card__icon">
-              <img
-                src={skill.icon}
-                alt={skill.label}
-                loading="lazy"
-                onError={(event) => {
-                  event.currentTarget.onerror = null;
-                  event.currentTarget.src =
-                    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg";
-                }}
-              />
+          <h2 className="max-w-3xl text-4xl md:text-5xl lg:text-6xl tracking-[-0.045em] leading-[1.05] font-medium">
+            What I can bring
+            <br />
+            to a project.
+          </h2>
+        </div>
+
+        {/* Skills columns */}
+        <div className="grid md:grid-cols-3 border-t border-black/15">
+          {/* 01 */}
+          <article
+            className="
+            py-10
+            md:pr-10
+            md:border-r
+            border-black/15
+          "
+          >
+            <span className="text-[10px] text-black/35">01</span>
+
+            <div className="mt-5 border-t border-black/15 pt-8">
+              <h3 className="text-2xl tracking-[-0.03em]">Frontend</h3>
+
+              <p className="mt-5 max-w-sm text-sm leading-6 text-black/55">
+                Building responsive and maintainable interfaces with a focus on
+                usability, clean structure and modern web development.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2">
+                {frontendSkills.map((skill) => (
+                  <span key={skill} className="text-sm text-black/80">
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="skill-card__name">{skill.label}</div>
-          </div>
-        ))}
-      </div>
+          </article>
 
-      <div className="skill-lists">
-        <article>
-          <h3>Frontend</h3>
-          <ul>
-            <li>React</li>
-            <li>Next.js</li>
-            <li>JavaScript</li>
-            <li>Tailwind CSS</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>Responsive Design</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Tools & Workflow</h3>
-          <ul>
-            <li>Git / GitHub</li>
-            <li>Vercel</li>
-            <li>VS Code</li>
-            <li>SEO Basics</li>
-            <li>UI/UX Basics</li>
-            <li>Currently learning TypeScript & GraphQL</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Additional Technical Skills</h3>
-          <ul>
-            <li>SolidWorks</li>
-            <li>SolidCAM</li>
-            <li>CNC Programming</li>
-            <li>Automation Systems</li>
-            <li>CAD/CAM Workflows</li>
-          </ul>
-        </article>
+          {/* 02 */}
+          <article
+            className="
+            py-10
+            md:px-10
+            md:border-r
+            border-t md:border-t-0
+            border-black/15
+          "
+          >
+            <span className="text-[10px] text-black/35">02</span>
+
+            <div className="mt-5 border-t border-black/15 pt-8">
+              <h3 className="text-2xl tracking-[-0.03em]">Development</h3>
+
+              <p className="mt-5 max-w-sm text-sm leading-6 text-black/55">
+                From development and deployment to optimization. I like working
+                through the complete process instead of focusing only on the
+                visual layer.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2">
+                {workflowSkills.map((skill) => (
+                  <span key={skill} className="text-sm text-black/80">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </article>
+
+          {/* 03 */}
+          <article
+            className="
+            py-10
+            md:pl-10
+            border-t md:border-t-0
+            border-black/15
+          "
+          >
+            <span className="text-[10px] text-black/35">03</span>
+
+            <div className="mt-5 border-t border-black/15 pt-8">
+              <h3 className="text-2xl tracking-[-0.03em]">✦ Engineering</h3>
+
+              <p className="mt-5 max-w-sm text-sm leading-6 text-black/55">
+                My engineering background brings practical problem solving,
+                precision and systems thinking into the way I approach software
+                and digital products.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2">
+                {engineeringSkills.map((skill) => (
+                  <span key={skill} className="text-sm text-black/80">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   );
