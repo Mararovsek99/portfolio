@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Magnetic from "./Magnetic";
 
 const Menu = ({ openingComplete }) => {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const [mobileScrolled, setMobileScrolled] = useState(false);
@@ -93,33 +94,37 @@ const Menu = ({ openingComplete }) => {
             <div className="mb-10 h-px w-full bg-white/10" />
 
             <nav className="flex flex-col gap-5 text-4xl tracking-[-0.04em]">
-              {links.map((link, index) => (
-                <div key={link.name} className="w-fit">
-                  <Magnetic>
-                    {link.external ? (
-                      <a
-                        onClick={() => setOpen(false)}
-                        href={link.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex items-center gap-4"
-                      >
-                        {index === 0 && <span className="text-2xl">•</span>}
-                        {link.name}
-                      </a>
-                    ) : (
-                      <Link
-                        onClick={() => setOpen(false)}
-                        to={link.href}
-                        className="flex items-center gap-4"
-                      >
-                        {index === 0 && <span className="text-2xl">•</span>}
-                        {link.name}
-                      </Link>
-                    )}
-                  </Magnetic>
-                </div>
-              ))}
+              {links.map((link, index) => {
+                const isActive =
+                  !link.external && location.pathname === link.href;
+                return (
+                  <div key={link.name} className="w-fit">
+                    <Magnetic>
+                      {link.external ? (
+                        <a
+                          onClick={() => setOpen(false)}
+                          href={link.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center gap-4"
+                        >
+                          {index === 0 && <span className="text-2xl">•</span>}
+                          {link.name}
+                        </a>
+                      ) : (
+                        <Link
+                          onClick={() => setOpen(false)}
+                          to={link.href}
+                          className="flex items-center gap-4"
+                        >
+                          {isActive && <span className="text-2xl">•</span>}
+                          {link.name}
+                        </Link>
+                      )}
+                    </Magnetic>
+                  </div>
+                );
+              })}
             </nav>
           </div>
 
