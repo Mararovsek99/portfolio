@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Magnetic from "./Magnetic";
 
 const Menu = ({ openingComplete }) => {
@@ -22,7 +23,7 @@ const Menu = ({ openingComplete }) => {
     { name: "Home", href: "/" },
     { name: "Work", href: "https://github.com/Mararovsek99", external: true },
     { name: "About", href: "/about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -53,15 +54,15 @@ const Menu = ({ openingComplete }) => {
           >
             <div className="flex flex-col gap-2">
               <span
-                className={`h-px w-6 bg-white transition-all duration-300 ${
-                  open ? "translate-y-[4px] rotate-45" : ""
-                }`}
+                className={`h-px w-6 transition-all duration-300 ${
+                  open || mobileScrolled ? "bg-white" : "bg-black"
+                } ${open ? "translate-y-[4px] rotate-45" : ""}`}
               />
 
               <span
-                className={`h-px w-6 bg-white transition-all duration-300 ${
-                  open ? "-translate-y-[5px] -rotate-45" : ""
-                }`}
+                className={`h-px w-6 transition-all duration-300 ${
+                  open || mobileScrolled ? "bg-white" : "bg-black"
+                } ${open ? "-translate-y-[5px] -rotate-45" : ""}`}
               />
             </div>
           </button>
@@ -95,16 +96,27 @@ const Menu = ({ openingComplete }) => {
               {links.map((link, index) => (
                 <div key={link.name} className="w-fit">
                   <Magnetic>
-                    <a
-                      onClick={() => setOpen(false)}
-                      href={link.href}
-                      target={link.external ? "_blank" : undefined}
-                      rel={link.external ? "noreferrer" : undefined}
-                      className="flex items-center gap-4"
-                    >
-                      {index === 0 && <span className="text-2xl">•</span>}
-                      {link.name}
-                    </a>
+                    {link.external ? (
+                      <a
+                        onClick={() => setOpen(false)}
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center gap-4"
+                      >
+                        {index === 0 && <span className="text-2xl">•</span>}
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link
+                        onClick={() => setOpen(false)}
+                        to={link.href}
+                        className="flex items-center gap-4"
+                      >
+                        {index === 0 && <span className="text-2xl">•</span>}
+                        {link.name}
+                      </Link>
+                    )}
                   </Magnetic>
                 </div>
               ))}

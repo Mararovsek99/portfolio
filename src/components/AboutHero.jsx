@@ -54,7 +54,7 @@ const AboutHero = () => {
 
             <div>
               <p className="text-xl md:text-2xl leading-snug tracking-[-0.025em]">
-                Hi, I'm Andrej — a frontend developer focused on building clean,
+                Hi, I'm Andrej, frontend developer focused on building clean,
                 responsive and modern web experiences.
               </p>
             </div>
