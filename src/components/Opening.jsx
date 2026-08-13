@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Opening.css";
 
-const greetings = ["Hello", "Hola", "Bonjour", "Hallo", "Ciao"];
+const greetings = ["Hello", "Zdravo", "Hola", "Bonjour", "Hallo", "Ciao"];
 
 const Opening = ({ onFinished }) => {
   const [index, setIndex] = useState(0);
@@ -49,7 +49,7 @@ const Opening = ({ onFinished }) => {
       const isFirst = index === 0;
       const isLastBeforeEnd = index === greetings.length - 2;
 
-      const delay = isFirst || isLastBeforeEnd ? 500 : 200;
+      const delay = isFirst || isLastBeforeEnd ? 400 : 300;
 
       const timer = setTimeout(() => setIndex(index + 1), delay);
       return () => clearTimeout(timer);

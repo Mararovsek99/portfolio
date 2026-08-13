@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Contact from "./components/Contact";
 
 const App = () => {
   const location = useLocation();
@@ -37,7 +37,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      <Footer />
+      {location.pathname !== "/contact" && <Footer />}
     </>
   );
 };

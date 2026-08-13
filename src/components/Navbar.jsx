@@ -7,10 +7,21 @@ const Navbar = ({ hidden }) => {
   if (hidden) {
     return null;
   }
-  const isLightPage = ["/about", "/contact"].includes(location.pathname);
 
-  const textClass = isLightPage ? "text-black" : "text-white";
-  const accentClass = isLightPage ? "bg-black" : "bg-white";
+  const isContact = location.pathname === "/contact";
+  const isAbout = location.pathname === "/about";
+
+  // Contact uses dark Footer — show white nav. About uses light background — show black nav.
+  const textClass = isContact
+    ? "text-white"
+    : isAbout
+      ? "text-black"
+      : "text-white";
+  const accentClass = isContact
+    ? "bg-white"
+    : isAbout
+      ? "bg-black"
+      : "bg-white";
 
   const buttons = [
     { name: "About", to: "/about" },

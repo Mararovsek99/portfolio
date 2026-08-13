@@ -34,8 +34,13 @@ const Menu = ({ openingComplete }) => {
   return (
     <>
       <div
-        className={`
-          fixed right-6 top-6 z-[900]
+        className={(() => {
+          // keep menu button on top for small screens; on md+ when at top (not scrolled)
+          // lower z so Navbar (z-1000) sits above it. When scrolled, menu should be on top.
+          const zClass = mobileScrolled ? "z-[9999]" : "z-[9999] md:z-[900]";
+
+          return `
+          fixed right-6 top-6 ${zClass}
           transition-all duration-300
           ${openingComplete ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none"}
           ${
@@ -43,30 +48,35 @@ const Menu = ({ openingComplete }) => {
               ? "md:opacity-100 md:scale-100"
               : "md:opacity-0 md:scale-75"
           }
-        `}
+        `;
+        })()}
       >
         <Magnetic>
           <button
             onClick={() => setOpen(!open)}
             className={`
-              flex h-16 w-16 items-center justify-center
-              rounded-full text-white
-              md:h-20 md:w-20
-              transition-all duration-300 ease-out
-              ${mobileScrolled ? "bg-[#1c1d20]" : "bg-transparent md:bg-[#1c1d20]"}
-              hover:scale-110 active:scale-95
-            `}
+                flex h-16 w-16 items-center justify-center
+                rounded-full text-white
+                md:h-20 md:w-20
+                transition-all duration-300 ease-out
+                ${mobileScrolled ? "bg-[#1c1d20]" : "bg-transparent md:bg-[#1c1d20]"}
+                hover:scale-110 active:scale-95
+              `}
           >
             <div className="flex flex-col gap-2">
               <span
                 className={`h-px w-6 transition-all duration-300 ${
-                  open || mobileScrolled ? "bg-white" : "bg-black"
+                  open || mobileScrolled || location.pathname === "/contact"
+                    ? "bg-white"
+                    : "bg-black"
                 } ${open ? "translate-y-[4px] rotate-45" : ""}`}
               />
 
               <span
                 className={`h-px w-6 transition-all duration-300 ${
-                  open || mobileScrolled ? "bg-white" : "bg-black"
+                  open || mobileScrolled || location.pathname === "/contact"
+                    ? "bg-white"
+                    : "bg-black"
                 } ${open ? "-translate-y-[5px] -rotate-45" : ""}`}
               />
             </div>

@@ -19,7 +19,7 @@
 }
 
 .opening-text {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease-out;
 }
 
 .text-hide {

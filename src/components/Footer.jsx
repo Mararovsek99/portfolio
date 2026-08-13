@@ -14,9 +14,9 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="relative min-h-screen bg-[#1c1d20] px-8 py-16 text-white overflow-hidden md:min-h-[90vh]"
+      className="relative h-screen bg-[#1c1d20] px-8 py-16 text-white overflow-hidden"
     >
-      <div className="max-w-[1350px] mx-auto pt-28">
+      <div className="max-w-[1350px] mx-auto pt-10 md:pt-40">
         <div className="flex items-start gap-8">
           <img
             src="/favicon/web-app-manifest-512x512.png"

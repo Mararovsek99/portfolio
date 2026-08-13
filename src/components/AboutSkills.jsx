@@ -119,7 +119,7 @@ const AboutSkills = () => {
             <span className="text-[10px] text-black/35">03</span>
 
             <div className="mt-5 border-t border-black/15 pt-8">
-              <h3 className="text-2xl tracking-[-0.03em]">✦ Engineering</h3>
+              <h3 className="text-2xl tracking-[-0.03em]"> Engineering</h3>
 
               <p className="mt-5 max-w-sm text-sm leading-6 text-black/55">
                 My engineering background brings practical problem solving,

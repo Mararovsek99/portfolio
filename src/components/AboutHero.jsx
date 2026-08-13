@@ -68,9 +68,9 @@ const AboutHero = () => {
 
               <p className="mt-5 text-sm md:text-base leading-7 text-black/65">
                 My background in mechatronics, CNC programming and CAD/CAM gives
-                me a different perspective on software development — structured
-                thinking, technical problem solving and attention to detail are
-                a natural part of the way I work.
+                me a different perspective on software development like
+                structured thinking, technical problem solving and attention to
+                detail are a natural part of the way I work.
               </p>
 
               <p className="mt-6 text-xs text-black/35">
