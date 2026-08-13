@@ -22,7 +22,11 @@ const Menu = ({ openingComplete }) => {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "Work", href: "https://github.com/Mararovsek99", external: true },
+    {
+      name: "GitHub",
+      href: "https://github.com/Mararovsek99",
+      external: true,
+    },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -31,7 +35,7 @@ const Menu = ({ openingComplete }) => {
     <>
       <div
         className={`
-          fixed right-6 top-6 z-[9999]
+          fixed right-6 top-6 z-[900]
           transition-all duration-300
           ${openingComplete ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none"}
           ${

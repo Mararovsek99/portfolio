@@ -14,7 +14,7 @@ const Navbar = ({ hidden }) => {
 
   const buttons = [
     { name: "About", to: "/about" },
-    { name: "Work", to: "https://github.com/Mararovsek99", external: true },
+    { name: "GitHub", to: "https://github.com/Mararovsek99", external: true },
     { name: "Contact", to: "/contact" },
   ];
 
