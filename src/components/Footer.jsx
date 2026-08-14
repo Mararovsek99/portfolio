@@ -30,7 +30,7 @@ const Footer = () => {
           </h2>
         </div>
 
-        <div className="relative mt-28 h-px bg-white/15">
+        <div className="relative mt-20 md:mt-40 h-px bg-white/15">
           <motion.a
             href="mailto:andrej.marovsek99@gmail.com"
             style={{ x }}
