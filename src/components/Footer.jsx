@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   const footerRef = useRef(null);
@@ -10,6 +11,9 @@ const Footer = () => {
   });
 
   const x = useTransform(scrollYProgress, [0, 1], [-120, 120]);
+
+  const location = useLocation();
+  const isContact = location.pathname === "/contact";
 
   return (
     <footer
@@ -71,27 +75,29 @@ const Footer = () => {
         </div>
 
         {/* Credits */}
-        <div className="order-2 text-left md:text-center lg:order-none lg:absolute lg:left-1/2 lg:-translate-x-1/2">
-          <p className="mb-4 text-xs text-white/40">CREDITS</p>
+        {!isContact && (
+          <div className="order-2 text-left md:text-center lg:order-none lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+            <p className="mb-4 text-xs text-white/40">CREDITS</p>
 
-          <div className="flex flex-wrap gap-2 text-sm md:justify-center">
-            <span className="text-white/40">Inspired by</span>
+            <div className="flex flex-wrap gap-2 text-sm md:justify-center">
+              <span className="text-white/40">Inspired by</span>
 
-            <a
-              href="https://www.linkedin.com/in/dennissnellenberg/"
-              target="_blank"
-              className="transition-colors hover:text-white"
-            >
-              Dennis Snellenberg
-            </a>
-            <div className="basis-full md:hidden" />
+              <a
+                href="https://www.linkedin.com/in/dennissnellenberg/"
+                target="_blank"
+                className="transition-colors hover:text-white"
+              >
+                Dennis Snellenberg
+              </a>
+              <div className="basis-full md:hidden" />
 
-            <span className="hidden text-white/40 lg:block">-</span>
+              <span className="hidden text-white/40 lg:block">-</span>
 
-            <span className="text-white/40">Built by</span>
-            <span>Andrej Marovšek</span>
+              <span className="text-white/40">Built by</span>
+              <span>Andrej Marovšek</span>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Socials */}
         <div className="order-1 flex flex-col items-start md:items-center lg:order-none lg:ml-auto lg:items-center">

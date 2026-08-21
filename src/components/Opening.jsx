@@ -49,7 +49,7 @@ const Opening = ({ onFinished }) => {
       const isFirst = index === 0;
       const isLastBeforeEnd = index === greetings.length - 2;
 
-      const delay = isFirst || isLastBeforeEnd ? 400 : 300;
+      const delay = isFirst || isLastBeforeEnd ? 300 : 200;
 
       const timer = setTimeout(() => setIndex(index + 1), delay);
       return () => clearTimeout(timer);
