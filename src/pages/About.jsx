@@ -1,6 +1,9 @@
 import "./About.css";
 import AboutHero from "../components/AboutHero";
 import AboutSkills from "../components/AboutSkills";
+import AboutBackground from "../components/AboutBackground";
+import AboutLearning from "../components/AboutLearning";
+import AboutLanguages from "../components/AboutLanguages";
 
 const About = () => {
   return (
@@ -8,6 +11,9 @@ const About = () => {
       <div className="about-page__container">
         <AboutHero />
         <AboutSkills />
+        <AboutBackground />
+        <AboutLearning />
+        <AboutLanguages />
       </div>
     </main>
   );
