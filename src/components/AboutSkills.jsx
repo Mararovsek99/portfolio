@@ -62,8 +62,9 @@ const AboutSkills = () => {
               <h3 className="text-2xl tracking-[-0.03em]">Frontend</h3>
 
               <p className="mt-5 max-w-sm text-sm leading-6 text-black/55">
-                Building responsive and maintainable interfaces with a focus on
-                usability, clean structure and modern web development.
+                For frontend development, my main tools are VS Code and
+                Responsively App. For smooth, responsive web experiences, I like
+                to use the Motion library.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2">
@@ -89,12 +90,19 @@ const AboutSkills = () => {
             <span className="text-[10px] text-black/35">02</span>
 
             <div className="mt-5 border-t border-black/15 pt-8">
-              <h3 className="text-2xl tracking-[-0.03em]">Development</h3>
+              <h3 className="text-2xl tracking-[-0.03em]">Currently</h3>
 
               <p className="mt-5 max-w-sm text-sm leading-6 text-black/55">
-                From development and deployment to optimization. I like working
-                through the complete process instead of focusing only on the
-                visual layer.
+                I'm continuously improving my skills to become a stronger
+                frontend developer. In my free time, I work on real projects
+                like{" "}
+                <a
+                  className="font-bold text-blue-500"
+                  href="https://fizioluma.si/"
+                >
+                  fizioluma.si
+                </a>{" "}
+                and this portfolio.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2">
@@ -122,9 +130,9 @@ const AboutSkills = () => {
               <h3 className="text-2xl tracking-[-0.03em]"> Engineering</h3>
 
               <p className="mt-5 max-w-sm text-sm leading-6 text-black/55">
-                My engineering background brings practical problem solving,
-                precision and systems thinking into the way I approach software
-                and digital products.
+                My goal is to reach the same level in web development that I
+                have in mechatronics engineering. I rarely believe something
+                can't be done, but I keep working until I find a way.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2">

@@ -1,6 +1,17 @@
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 import GlobeIcon from "./GlobeIcon";
 
 const AboutHero = () => {
+  const imageRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: imageRef,
+    offset: ["start end", "end start"],
+  });
+
+  const imageY = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+
   return (
     <section className="bg-[#f7f7f5] text-[#1d1d1f]">
       <div className="mx-auto max-w-[1440px] sm:px-8 md:px-12 lg:px-16">
@@ -52,11 +63,15 @@ lg:grid-cols-[1fr_1fr_1fr]
           >
             {/* Portrait */}
             <div className="w-full md:max-w-[340px] lg:max-w-[400px] xl:max-w-[460px]">
-              <div className="overflow-hidden aspect-[4/5]">
-                <img
+              <div
+                ref={imageRef}
+                className="relative overflow-hidden aspect-[4/5]"
+              >
+                <motion.img
                   src="about_photo.webp"
                   alt="Andrej Marovšek"
-                  className="h-full w-full object-cover"
+                  style={{ y: imageY }}
+                  className="absolute left-0 top-[-5%] h-[120%] w-full object-cover"
                 />
               </div>
 
@@ -64,7 +79,7 @@ lg:grid-cols-[1fr_1fr_1fr]
                 <span className="text-lg font-light">↓</span>
 
                 <span className="text-[10px] uppercase tracking-[0.18em] text-black/35">
-                  Frontend · Engineering
+                  Frontend · Engineering · also DAD
                 </span>
               </div>
             </div>
@@ -80,16 +95,36 @@ lg:grid-cols-[1fr_1fr_1fr]
             {/* Description */}
             <div className="max-w-md">
               <p className="text-sm md:text-base leading-7 text-black/65">
-                I work with React, Next.js, JavaScript and Tailwind CSS,
-                creating interfaces that combine clean design with practical
-                functionality.
+                I'm the type of person who wants to understand everything from
+                top to bottom. I know a lot about the electrical world and can
+                repair almost anything with electrical components. I know less
+                about electronics, simply because it's one of the few technical
+                areas that doesn't interest me that much. In mechatronics, I
+                learned about a wide range of things, which I really love,
+                including automation, programming, sensors, actuators and much
+                more.
               </p>
 
               <p className="mt-5 text-sm md:text-base leading-7 text-black/65">
-                My background in mechatronics, CNC programming and CAD/CAM gives
-                me a different perspective on software development — structured
-                thinking, technical problem solving and attention to detail are
-                a natural part of the way I work.
+                Currently, I work as a CNC programmer and technical workshop
+                leader. I also support the company with computers, printers and
+                CNC machine maintenance.
+              </p>
+
+              <p className="mt-5 text-sm md:text-base leading-7 text-black/65">
+                My biggest problem is that I feel like there is never enough
+                time to learn everything I want to know. I hate not
+                understanding something, and there are simply too many things I
+                want to learn and too little time to learn them all. At home we
+                have farm, so working is something i enyoy. The best felling at
+                the end of the day is, if you did at one thing right.
+              </p>
+
+              <p className="mt-5 text-sm md:text-base leading-7 text-black/65">
+                {" "}
+                At home, we have a small farm, so working and building things is
+                something I genuinely enjoy. The best feeling at the end of the
+                day is knowing that you did at least one thing right.
               </p>
 
               <p className="mt-6 text-xs text-black/35">
