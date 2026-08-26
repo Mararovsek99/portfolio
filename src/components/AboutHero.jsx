@@ -97,27 +97,23 @@ lg:grid-cols-[1fr_1fr_1fr]
               <p className="text-sm md:text-base leading-7 text-black/65">
                 I'm the type of person who wants to understand everything from
                 top to bottom. I know a lot about the electrical world and can
-                repair almost anything with electrical components. I know less
-                about electronics, simply because it's one of the few technical
-                areas that doesn't interest me that much. In mechatronics, I
-                learned about a wide range of things, which I really love,
-                including automation, programming, sensors, actuators and much
-                more.
+                repair almost anything with electrical components.In
+                mechatronics, I learned about a wide range of things, which I
+                really love, including automation, programming, sensors,
+                actuators and much more.
               </p>
 
               <p className="mt-5 text-sm md:text-base leading-7 text-black/65">
                 Currently, I work as a CNC programmer and technical workshop
-                leader. I also support the company with computers, printers and
-                CNC machine maintenance.
+                leader. I also support the company with repearing computers,
+                printers and CNC machine maintenance.
               </p>
 
               <p className="mt-5 text-sm md:text-base leading-7 text-black/65">
                 My biggest problem is that I feel like there is never enough
                 time to learn everything I want to know. I hate not
                 understanding something, and there are simply too many things I
-                want to learn and too little time to learn them all. At home we
-                have farm, so working is something i enyoy. The best felling at
-                the end of the day is, if you did at one thing right.
+                want to learn and too little time to learn them all.
               </p>
 
               <p className="mt-5 text-sm md:text-base leading-7 text-black/65">
