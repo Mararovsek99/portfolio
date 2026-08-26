@@ -11,6 +11,12 @@ const education = [
     place: "School Centre Celje",
     text: "Built a foundation in programming, CAD/CAM, robotics and automated systems.",
   },
+  {
+    period: "2014 — 2017",
+    title: "Electrician",
+    place: "School Centre Celje",
+    text: "Learned about electrical systems, circuits, components and how to design electrical devices.",
+  },
 ];
 
 const AboutBackground = () => {
@@ -21,7 +27,7 @@ const AboutBackground = () => {
           {/* Heading */}
           <div>
             <span className="mb-5 block text-xs uppercase tracking-[0.22em] text-black/40">
-              Background
+              EDUCATION
             </span>
 
             <h2 className="max-w-lg text-4xl font-medium leading-[1.05] tracking-[-0.045em] md:text-5xl lg:text-6xl">

@@ -15,16 +15,16 @@ const AboutHero = () => {
   return (
     <section className="bg-[#f7f7f5] text-[#1d1d1f]">
       <div className="mx-auto max-w-[1440px] sm:px-8 md:px-12 lg:px-16">
-        <div className="min-h-[85vh] flex flex-col justify-center py-24 md:py-32">
+        <div className="min-h-[85vh] flex flex-col justify-center py-24 md:py-32 ">
           {/* Small label */}
-          <div className="mb-12 md:mb-20">
+          <div className="mb-12 md:mb-20 px-6">
             <span className="text-xs uppercase tracking-[0.22em] text-black/45">
               About me
             </span>
           </div>
 
           {/* Main title */}
-          <div className="max-w-5xl">
+          <div className="max-w-5xl px-6">
             <h1 className="text-[clamp(3.2rem,8vw,7rem)] leading-[0.92] tracking-[-0.055em] font-medium">
               Developer with
               <br />
@@ -75,7 +75,7 @@ lg:grid-cols-[1fr_1fr_1fr]
                 />
               </div>
 
-              <div className="mt-4 flex items-center gap-3">
+              <div className="mt-4 flex items-center gap-3 px-6">
                 <span className="text-lg font-light">↓</span>
 
                 <span className="text-[10px] uppercase tracking-[0.18em] text-black/35">
@@ -85,7 +85,7 @@ lg:grid-cols-[1fr_1fr_1fr]
             </div>
 
             {/* Intro */}
-            <div>
+            <div className="px-6">
               <p className="text-xl md:text-2xl leading-snug tracking-[-0.025em]">
                 Hi, I'm Andrej, frontend developer focused on building clean,
                 responsive and modern web experiences.
@@ -93,7 +93,7 @@ lg:grid-cols-[1fr_1fr_1fr]
             </div>
 
             {/* Description */}
-            <div className="max-w-md">
+            <div className="max-w-md px-6">
               <p className="text-sm md:text-base leading-7 text-black/65">
                 I'm the type of person who wants to understand everything from
                 top to bottom. I know a lot about the electrical world and can

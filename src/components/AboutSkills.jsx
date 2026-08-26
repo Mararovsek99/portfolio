@@ -94,8 +94,8 @@ const AboutSkills = () => {
 
               <p className="mt-5 max-w-sm text-sm leading-6 text-black/55">
                 I'm continuously improving my skills to become a stronger
-                frontend developer. In my free time, I work on real projects
-                like{" "}
+                frontend developer. Beside from learning, I work on real
+                projects like{" "}
                 <a
                   className="font-bold text-blue-500"
                   href="https://fizioluma.si/"
