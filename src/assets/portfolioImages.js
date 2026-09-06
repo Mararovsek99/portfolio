@@ -6,4 +6,5 @@ export const portfolioImages = [
   "/battleship_mockup.webp",
   "/etch_a_sketch_mockup.webp",
   "/tic-tac-toe_mockup.webp",
+  "/YtToMp3_mockup.webp",
 ];

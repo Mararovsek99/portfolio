@@ -17,6 +17,12 @@ const projects = [
     image: portfolioImages[0],
     url: "https://fizioluma.si",
   },
+  {
+    title: "YT to MP3",
+    technologies: ["Python", "Tkinter", "yt-dlp", "FFmpeg", "PyInstaller"],
+    image: portfolioImages[5],
+    url: "https://github.com/Mararovsek99/yt-to-mp3-windows-app",
+  },
 
   {
     title: "CV Maker",
