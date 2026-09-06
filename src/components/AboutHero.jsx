@@ -110,13 +110,6 @@ lg:grid-cols-[1fr_1fr_1fr]
               </p>
 
               <p className="mt-5 text-sm md:text-base leading-7 text-black/65">
-                My biggest problem is that I feel like there is never enough
-                time to learn everything I want to know. I hate not
-                understanding something, and there are simply too many things I
-                want to learn and too little time to learn them all.
-              </p>
-
-              <p className="mt-5 text-sm md:text-base leading-7 text-black/65">
                 {" "}
                 At home, we have a small farm, so working and building things is
                 something I genuinely enjoy. The best feeling at the end of the
